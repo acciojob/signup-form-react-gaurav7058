@@ -84,6 +84,7 @@ const App = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <br />
+        <span>
         <select
           data-testid="gender"
           value={gender}
@@ -93,6 +94,7 @@ const App = () => {
           <option value="female">Female</option>
           <option value="other">Other</option>
         </select>
+        </span>
         <br />
         <input
           type="text"
