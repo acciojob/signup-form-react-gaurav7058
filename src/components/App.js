@@ -24,42 +24,42 @@ const App = () => {
 
     // Validate name
     if (!isValidName(name)) {
-      setError("Name is not alphanumeric.");
+      setError("Name is not alphanumeric");
       setGreeting("");
       return;
     }
 
     // Validate email
     if (!email.includes("@")) {
-      setError("Email must contain @.");
+      setError("Email must contain @");
       setGreeting("");
       return;
     }
 
     // Validate gender
     if (!["male", "female", "other"].includes(gender)) {
-      setError("Please identify as male, female or others.");
+      setError("Please identify as male, female or others");
       setGreeting("");
       return;
     }
 
     // Validate phone number
     if (isNaN(number)) {
-      setError("Phone Number must contain only numbers.");
+      setError("Phone Number must contain only numbers");
       setGreeting("");
       return;
     }
 
     // Validate password length
     if (password.length < 6) {
-      setError("Password must contain at least 6 letters.");
+      setError("Password must contain at least 6 letters");
       setGreeting("");
       return;
     }
 
     // Extract username from email and set greeting
     const username = email.split("@")[0];
-    setGreeting(`Hello ${username}`);
+    setGreeting(`Hello ${username.toUpperCase()}`);
     setError(""); // Clear error if all validations pass
   }
 
