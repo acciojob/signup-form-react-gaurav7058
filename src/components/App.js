@@ -113,7 +113,7 @@ const App = () => {
         <button type="submit" data-testid="submit">Submit</button>
         
         {/* Error message */}
-        {error && <div className="error" style={{ color: "red" }}>{error}</div>}
+        {error && <div className="error" style={{ color: "red" }}><span>{error}</span></div>}
 
         {/* Greeting message */}
         {greeting && <div className="greeting"><h1>{greeting}</h1></div>}
