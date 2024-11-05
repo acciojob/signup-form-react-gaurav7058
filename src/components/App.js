@@ -84,7 +84,6 @@ const App = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <br />
-        <span>
         <select
           data-testid="gender"
           value={gender}
@@ -94,7 +93,6 @@ const App = () => {
           <option value="female">Female</option>
           <option value="other">Other</option>
         </select>
-        </span>
         <br />
         <input
           type="text"
@@ -118,7 +116,7 @@ const App = () => {
         {error && <div className="error" style={{ color: "red" }}><span>{error}</span></div>}
 
         {/* Greeting message */}
-        {greeting && <div className="greeting"><h2>{greeting}</h2></div>}
+        {greeting && <span className="greeting"><h2>{greeting}</h2></span>}
       </form>
     </div>
   );
