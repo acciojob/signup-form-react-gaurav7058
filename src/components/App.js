@@ -16,7 +16,7 @@ const App = () => {
     e.preventDefault();
 
     // Check if any field is empty
-    if (!name || !email || !gender || !number || !password) {
+    if (!name || !email  || !number || !password) {
       setError("All fields are mandatory");
       setGreeting("");
       return;
@@ -89,6 +89,7 @@ const App = () => {
           value={gender}
           onChange={(e) => setGender(e.target.value)}
         >
+          <option value="">sele</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
@@ -116,7 +117,7 @@ const App = () => {
         {error && <div className="error" style={{ color: "red" }}><span>{error}</span></div>}
 
         {/* Greeting message */}
-        {greeting && <span className="greeting">{greeting}</span>}
+        {greeting && <span className="greeting"><h2>{greeting}</h2></span>}
       </form>
     </div>
   );
