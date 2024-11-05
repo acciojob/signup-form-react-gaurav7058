@@ -31,7 +31,7 @@ const App = () => {
 
     // Validate email
     if (!email.includes("@")) {
-      setError("Email must contain @");
+      setError("email must contain @");
       setGreeting("");
       return;
     }
@@ -52,7 +52,7 @@ const App = () => {
 
     // Validate password length
     if (password.length < 6) {
-      setError("Password must contain at least 6 letters");
+      setError("Password must contain atleast 6 letters");
       setGreeting("");
       return;
     }
